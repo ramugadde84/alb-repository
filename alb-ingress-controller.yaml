@@ -36,7 +36,7 @@ spec:
             # Name of your cluster. Used when naming resources created
             # by the ALB Ingress Controller, providing distinction between
             # clusters.
-             - --cluster-name=attractive-gopher
+            # - --cluster-name=devCluster
 
             # AWS VPC ID this ingress controller will use to create AWS resources.
             # If unspecified, it will be discovered from ec2metadata.
@@ -45,7 +45,7 @@ spec:
             # AWS region this ingress controller will operate in.
             # If unspecified, it will be discovered from ec2metadata.
             # List of regions: http://docs.aws.amazon.com/general/latest/gr/rande.html#vpc_region
-             - --aws-region=ap-south-1
+            # - --aws-region=us-west-1
 
             # Enables logging on all outbound requests sent to the AWS API.
             # If logging is desired, set to true.
@@ -58,13 +58,13 @@ spec:
             # This is only here for examples. It's recommended you instead use
             # a project like kube2iam for granting access.
             #- name: AWS_ACCESS_KEY_ID
-              value: AKIA6K2GHL5NQPQYBJBF
+            #  value: KEYVALUE
 
             # AWS key secret for authenticating with the AWS API.
             # This is only here for examples. It's recommended you instead use
             # a project like kube2iam for granting access.
             #- name: AWS_SECRET_ACCESS_KEY
-            #  value: /70KR0oerNXU1FHqSSC5UQ0fCfIOucLVLLW3pCK5
+            #  value: SECRETVALUE
           # Repository location of the ALB Ingress Controller.
           image: docker.io/amazon/aws-alb-ingress-controller:v1.1.4
       serviceAccountName: alb-ingress-controller
